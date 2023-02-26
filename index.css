@@ -1,0 +1,53 @@
+.video-container {
+  position: relative;
+  top: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 6%;
+    padding-left: 8%;
+    padding-right: 0%;
+    margin-top: 0%;
+    margin-left: 0%;
+  overflow: visible;
+  video {
+    /* Make video to at least 100% wide and tall */
+
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: 80%;
+    top: 10%;
+    left: 0;
+
+    /* Center the video */
+    position: absolute;
+    top: 0;
+    
+  }
+
+
+}
+
+.overlay {
+  background-image: url("https://raw.githubusercontent.com/xXxZypherxXx/PTMV/bfa0471fb116d0401d239bccf1a67757ca74d3d1/Files/Image/CRT-Gaming.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 100%;
+  :last-child { margin-bottom: 0; }
+}
+
+
+////////////////////////////////////////
+
+code { font-family: monospace; }
+body { 
+  background: #333;
+  color: #fff;
+  font-family: 'Oxygen', sans-serif;
+}
