@@ -17,6 +17,7 @@
   background-image: url("https://raw.githubusercontent.com/xXxZypherxXx/PTMV/bfa0471fb116d0401d239bccf1a67757ca74d3d1/Files/Image/CRT-Gaming.png");
   background-size: 100%;
   background-repeat: no-repeat;
+  pointer-events: none;
   opacity: 1;
   position: absolute;
   top: 0;
