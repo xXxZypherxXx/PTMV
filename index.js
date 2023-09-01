@@ -21,6 +21,9 @@ window.onclick = function(event) {
 function red(message) {
     return "[[gb;#FF0000;black]" + message + "]";
 }
+function white(message) {
+    return "[[gb;#000000;white]" + message + "]";
+}
 
 $(function() {
     var anim = false;
@@ -65,7 +68,7 @@ $(function() {
 
     $('body').terminal(function(cmd, term) {
         var finish = false;
-        var msg = "Wait I'm executing ajax call";
+        var msg = "Response undefined";
         term.set_prompt('> ');
         typed_message(term, msg, 200, function() {
             finish = true;
@@ -87,9 +90,9 @@ $(function() {
         height: 300,
         onInit: function(term) {
             // first question
-            var msg = "Wellcome to my terminal";
+            var msg = "You are seeing this in error.";
             typed_message(term, msg, 200, function() {
-                typed_prompt(term, "what's your name:", 100);
+                typed_prompt(term, "You should not be here.", 100);
             });
         },
         keydown: function(e) {
