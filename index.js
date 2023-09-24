@@ -25,7 +25,7 @@ window.onclick = function(event) {
       }
     }
   }
-}
+};
 //A function for a terminal to display red text.
 function red(message) {
     return "[[gb;#FF0000;black]" + message + "]";
@@ -211,6 +211,6 @@ $('#dark').on('change', function() {
 $('#type, #dark').on('change', function() {
     setTimeout(function() {
         term.focus();
-    }, 400)
+    }, 400);
 });
 
