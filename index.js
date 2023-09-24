@@ -1,4 +1,3 @@
-// javascript
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -18,88 +17,191 @@ window.onclick = function(event) {
     }
   }
 }
+//A function for a terminal to display red text.
 function red(message) {
     return "[[gb;#FF0000;black]" + message + "]";
 }
-function white(message) {
-    return "[[gb;#000000;white]" + message + "]";
+function blue(message) {
+    return "[[gb;#08FFEB;black]" + message + "]";
+}
+//Animation function?
+var animation;
+
+//Below this is edited terminal shit.
+var shell = $('.shell').resizable({
+    minHeight: 10,
+    minWidth: 700,
+    aspectRatio: 16/9,
+}).draggable({
+    handle: '> .status-bar .title'
+});
+// Fake in memory filesystem
+var fs = {
+    'FOR-30DE': {
+        'Journal02_17_1516u.txt': Journal1516u.innerHTML ,
+        'FBIMemo.txt': FBINotice.innerHTML ,
+        'InABottle.msg': InABottle.innerHTML ,
+        'Krypt.msg': Krypt.innerHTML ,
+        "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
+                "Volume1": Volume1.innerHTML,
+            
+        }
+    }
+};
+
+var path = [];
+var cwd = fs;
+function restore_cwd(fs, path) {
+    path = path.slice();
+    while (path.length) {
+        var dir_name = path.shift();
+        if (!is_dir(fs[dir_name])) {
+            throw new Error('Internal Error Invalid directory ' +
+                            $.terminal.escape_brackets(dir_name));
+        }
+        fs = fs[dir_name];
+    }
+    return fs;
+}
+function red(message) {
+    return "[[gb;#FF0000;black]" + message + "]";
+}
+function is_dir(obj) {
+    return typeof obj === 'object';
+}
+function is_file(obj) {
+    return typeof obj === 'string';
+}
+var commands = {
+    cd: function(dir) {
+        this.pause();
+        if (dir === '/') {
+            path = [];
+            cwd = restore_cwd(fs, path);
+        } else if (dir === '..') {
+            if (path.length) {
+                path.pop(); // remove from end
+                cwd = restore_cwd(fs, path);
+            }
+        } else if (dir.match(/\//)) {
+            var p = dir.replace(/\/$/, '').split('/').filter(Boolean);
+            if (dir[0] !== '/') {
+                p = path.concat(p);
+            }
+            cwd = restore_cwd(fs, p);
+            path = p;
+        } else if (!is_dir(cwd[dir])) {
+            this.error($.terminal.escape_brackets(dir) + ' is not a directory');
+        } else {
+            cwd = cwd[dir];
+            path.push(dir);
+        }
+        this.resume();
+    },
+    ls: function() {
+        if (!is_dir(cwd)) {
+            throw new Error('Internal Error Invalid directory');
+        }
+        var dir = Object.keys(cwd).map(function(key) {
+            if (is_dir(cwd[key])) {
+                return key + '/';
+            }
+            return key;
+        });
+        this.echo(dir.join('\n'));
+    },
+    open: function(file) {
+        if (!is_file(cwd[file])) {
+            this.error($.terminal.escape_brackets(file) + " does not exist!");
+        } else {
+            this.echo(cwd[file]);
+        }
+    },
+    help: function() {
+        this.echo('Available commands: ' + Object.keys(commands).join(', '));
+    }
+};
+function completion(string, callback) {
+    var command = this.get_command();
+    var cmd = $.terminal.parse_command(command);
+    function dirs(cwd) {
+        return Object.keys(cwd).filter(function(key) {
+            return is_dir(cwd[key]);
+        }).map(function(dir) {
+            return dir + '/';
+        });
+    }
+    if (cmd.name === 'ls') {
+        callback([]);
+    } else if (cmd.name === 'cd') {
+        var p = string.split('/').filter(Boolean);
+        if (p.length === 1) {
+            if (string[0] === '/') {
+                callback(dirs(fs));
+            } else {
+                callback(dirs(cwd));
+            }
+        } else {
+            if (string[0] !== '/') {
+                p = path.concat(p);
+            }
+            if (string[string.length - 1] !== '/') {
+                p.pop();
+            }
+            var prefix = string.replace(/\/[^/]*$/, '');
+            callback(dirs(restore_cwd(fs, p)).map(function(dir) {
+                return prefix + '/' + dir;
+            }));
+        }
+    } else if (cmd.name === 'open') {
+        var files = Object.keys(cwd).filter(function(key) {
+            return is_file(cwd[key]);
+        });
+        callback(files);
+    } else {
+        callback(Object.keys(commands));
+    }
+};
+////THIS BEGINS CODERIP
+////THIS ENDS CODERIP
+var term = $('.cmdcontent').terminal(commands, {
+    animation,
+    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(val3.innerHTML) + val4.innerHTML, 
+    prompt: prompt(),
+    completion: completion,
+    // detect iframe codepen preview
+    enabled: $('body').attr('onload') === undefined,
+});
+
+// for codepen preview
+if (!term.enabled()) {
+    term.find('.cursor').addClass('blink');
+}
+function prompt(type) {
+    return function(callback) {
+        var prompt;
+            prompt = 'admin@VSpeaks:/' + path.join('/') + '$ ';
+        $('.title').html(prompt);
+        callback(prompt);
+    };
 }
 
-$(function() {
-    var anim = false;
-    function typed(finish_typing) {
-        return function(term, message, delay, finish) {
-            anim = true;
-            var prompt = term.get_prompt();
-            var c = 0;
-            if (message.length > 0) {
-                term.set_prompt('');
-                var new_prompt = '';
-                var interval = setInterval(function() {
-                    var chr = $.terminal.substring(message, c, c+1);
-                    new_prompt += chr;
-                    term.set_prompt(new_prompt);
-                    c++;
-                    if (c == length(message)) {
-                        clearInterval(interval);
-                        // execute in next interval
-                        setTimeout(function() {
-                            // swap command with prompt
-                            finish_typing(term, message, prompt);
-                            anim = false
-                            finish && finish();
-                        }, delay);
-                    }
-                }, delay);
-            }
-        };
-    }
-    function length(string) {
-        string = $.terminal.strip(string);
-        return $('<span>' + string + '</span>').text().length;
-    }
-    var typed_prompt = typed(function(term, message, prompt) {
-        term.set_prompt(message + ' ');
-    });
-    var typed_message = typed(function(term, message, prompt) {
-        term.echo(message)
-        term.set_prompt(prompt);
-    });
-
-    $('body').terminal(function(cmd, term) {
-        var finish = false;
-        var msg = "Response undefined";
-        term.set_prompt('> ');
-        typed_message(term, msg, 200, function() {
-            finish = true;
-        });
-        var args = {command: cmd};
-        $.get('commands.php', args, function(result) {
-            (function wait() {
-                if (finish) {
-                    term.echo(result);
-                } else {
-                    setTimeout(wait, 500);
-                }
-            })();
-        });
-    }, {
-        name: 'xxx',
-        greetings: null,
-        width: 500,
-        height: 300,
-        onInit: function(term) {
-            // first question
-            var msg = "You are seeing this in error.";
-            typed_message(term, msg, 200, function() {
-                typed_prompt(term, "You should not be here.", 100);
-            });
-        },
-        keydown: function(e) {
-            //disable keyboard when animating
-            if (anim) {
-                return false;
-            }
-        }
-    });
+$('#type').on('change', function() {
+    shell.removeClass('osx windows ubuntu default custom').addClass(this.value);
+    term.toggleClass('underline-animation', this.value == 'windows');
+    term.set_prompt(prompt(this.value));
 });
+$('#dark').on('change', function() {
+    shell.removeClass('dark light');
+    if (this.checked) {
+        shell.addClass('dark');
+    } else {
+        shell.addClass('light');
+    }
+});
+$('#type, #dark').on('change', function() {
+    setTimeout(function() {
+        term.focus();
+    }, 400)
+});
+
