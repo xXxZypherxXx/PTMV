@@ -188,6 +188,7 @@ body .shell .terminal .cmd {
 }
 .shell > .status-bar .title {
     cursor: move;
+    display: inline;
     background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,114,0,1) 73%, rgba(56,176,0,1) 100%);
     color: #70E000;
     margin: -1px;
