@@ -1,12 +1,3 @@
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/jcubic/static/js/wcwidth.js"></script>
-<script src="https://unpkg.com/jquery.terminal/js/jquery.mousewheel-min.js"></script>
-<script src="https://unpkg.com/js-polyfills/keyboard.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://codepen.io/jcubic/pen/WZjbgq.js?v=5"></script>
-<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-<script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/aaronbarker/css-variables-polyfill@master/css-var-polyfill.js"></script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
