@@ -37,12 +37,14 @@ html, body {
 .navbar{
     display: flex;
     background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,114,0,1) 73%, rgba(56,176,0,1) 100%);
-    height: 18px;
+    height: 28px;
     border-bottom: 1px solid #70E000;
+    margin: -8px;
+    
 }
 .navbarentry{
     margin: 0 20px;
-    font-size: 16px;
+    font-size: 20px;
     position: relative;
     top: -15px;
     /* Position Relative and the Top thingy can be used to put these block elements above their standard locations.*/
@@ -56,7 +58,7 @@ html, body {
     background-image: url(images/PTMVeye.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 35px;
+    width: 60px;
 }
 #bookmarks{
     color: #70E000;
@@ -72,31 +74,6 @@ html, body {
 
     }
     
-.windowheader{
-    display: flex;
-    opacity: 90%;
-    width: 57%;
-    height: 24px;
-    border: 2px solid #70E000;
-    position: relative;
-    left: 40%;
-    bottom: -15vw;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,114,0,1) 73%, rgba(56,176,0,1) 100%);
-    color: #70E000;
-
-}
-.windowtitle{
-    font-size: 18px;
-    font-family: 'Iceberg', cursive;
-    margin: 2px 25% 0 20%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
-}
-
-
 
 /* Dropdown Button */
 .dropbtn {
@@ -157,7 +134,8 @@ html, body {
 .material-symbols-outlined {
     color: #000000;
     background: #70E000;
-    border-radius: 25px;
+    border-radius: 15px;
+    display: inline-block;
 }
 
 /* Terminal Shit begins here. */
@@ -180,23 +158,29 @@ body .shell .terminal {
      */
     padding-bottom: 0;
 }
+
 body .shell .terminal .cmd {
     margin-bottom: 10px;
 }
 .shell .typed-cursor, .shell .cursor {
     background: transparent;
 }
+
 .shell > .status-bar .title {
     cursor: move;
-    display: inline;
     background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,114,0,1) 73%, rgba(56,176,0,1) 100%);
     color: #70E000;
-    margin: -1px;
-    font-size: 18px;
+    font-size: 24px;
     font-family: 'Iceberg', cursive;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: clip;
+    margin-top: -29px;
+    border-radius: 6px;
+    text-align: center;
+
+    
+
 
 
 }
@@ -241,7 +225,7 @@ body .shell .terminal .cmd {
 }
 .terminal::-webkit-scrollbar-track
 {
-	border: 1px solid var(--color, #aaa);
+	border: 2px solid var(--color, #aaa);
 	background-color: var(--background);
 }
 .terminal::-webkit-scrollbar
