@@ -161,14 +161,13 @@ function completion(string, callback) {
         callback(files);
     } else {
         callback(Object.keys(commands));
-        this.echo('Type help for a list of available commands.');
     }
 };
 ////THIS BEGINS CODERIP
 ////THIS ENDS CODERIP
 var term = $('.cmdcontent').terminal(commands, {
     animation,
-    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(RobinMech.innerHTML) + val4.innerHTML, 
+    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(RobinMech.innerHTML) + val4.innerHTML + "30DE terminal currently open. Please type help for a list of commands.",  
     prompt: prompt(),
     completion: completion,
     // detect iframe codepen preview
