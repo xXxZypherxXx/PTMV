@@ -51,6 +51,7 @@ var fs = {
 };
 
 var path = [];
+var commandNotFound = "Command '%s' Not Found! Please type help for a list of valid commands.";
 var cwd = fs;
 function restore_cwd(fs, path) {
     path = path.slice();
