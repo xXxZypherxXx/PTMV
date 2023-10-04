@@ -160,7 +160,7 @@ function completion(string, callback) {
         });
         callback(files);
     } else {
-        callback(Object.keys(commands));
+        callback(Object.keys(commands) + "Please type \'help\' for a list of available commands");
     }
 };
 ////THIS BEGINS CODERIP
