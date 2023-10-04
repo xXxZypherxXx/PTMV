@@ -42,6 +42,7 @@ var fs = {
         'FBIMemo.txt': FBINotice.innerHTML ,
         'InABottle.msg': InABottle.innerHTML ,
         'Krypt.msg': Krypt.innerHTML ,
+        'GoldenRule.tab': GoldenRule.innerHTML,
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
                 "Volume1": Volume1.innerHTML,
             
@@ -159,14 +160,14 @@ function completion(string, callback) {
         });
         callback(files);
     } else {
-        callback(Object.keys(commands));
+        callback(Object.keys(commands)+"Please type \'help\' for a list of valid commands.");
     }
 };
 ////THIS BEGINS CODERIP
 ////THIS ENDS CODERIP
 var term = $('.cmdcontent').terminal(commands, {
     animation,
-    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(val3.innerHTML) + val4.innerHTML, 
+    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(RobinMech.innerHTML) + val4.innerHTML, 
     prompt: prompt(),
     completion: completion,
     // detect iframe codepen preview
