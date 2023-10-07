@@ -140,7 +140,7 @@ html, body {
 
 /* Terminal Shit begins here. */
 body .shell {
-    width: 700px;
+    width: 760px;
     border: 2px solid #70E000;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
