@@ -32,6 +32,7 @@ var shell = $('.shell').resizable({
     minHeight: 100,
     minWidth: 760,
     aspectRatio: 16/9,
+    animate: true,
 }).draggable({
     handle: '> .status-bar .title'
 });
