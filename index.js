@@ -29,8 +29,8 @@ var animation;
 
 //Below this is edited terminal shit.
 var shell = $('.shell').resizable({
-    minHeight: 10,
-    minWidth: 700,
+    minHeight: 100,
+    minWidth: 760,
     aspectRatio: 16/9,
 }).draggable({
     handle: '> .status-bar .title'
