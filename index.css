@@ -162,7 +162,7 @@ body .shell .terminal {
 }
 
 body .shell .terminal .cmd {
-    margin-bottom: 10px;
+    margin-bottom: 64px;
 }
 .shell .typed-cursor, .shell .cursor {
     background: transparent;
