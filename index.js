@@ -169,7 +169,7 @@ function completion(string, callback) {
 ////THIS ENDS CODERIP
 var term = $('.cmdcontent').terminal(commands, {
     animation,
-    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(RobinMech.innerHTML) + val4.innerHTML + '<img src="http://lorempixel.com/output/cats-q-c-987-650-8.jpg"/>', {raw: true} +"30DE terminal currently open. Please type help for a list of commands.",  
+    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(RobinMech.innerHTML) + val5.innerHTML + "30DE terminal currently open. Please type help for a list of commands.",  
     prompt: prompt(),
     completion: completion,
     // detect iframe codepen preview
@@ -183,7 +183,7 @@ if (!term.enabled()) {
 function prompt(type) {
     return function(callback) {
         var prompt;
-            prompt = 'admin@VSpeaks:/' + path.join('/') + '$ ';
+            prompt = 'admin@GHMC:/' + path.join('/') + '$ ';
         $('.title').html(prompt);
         callback(prompt);
     };
