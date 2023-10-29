@@ -212,6 +212,9 @@ body .shell .terminal .cmd {
     font-size: 12px;
         opacity: 60%;
 }
+.terminal img {
+    max-width: 100%;
+}
 .cmd {
     background-color: inherit;
 }
