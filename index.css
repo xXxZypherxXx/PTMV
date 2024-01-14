@@ -7,6 +7,7 @@
 Change Terminal Output Color 
 Make terminal greeting akin to unix
 Put in embed info for discord.
+Greyharrow old color used to be #a8c1f1
 */
 
 
@@ -36,9 +37,9 @@ html, body {
 }
 .navbar{
     display: flex;
-    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(168, 193, 241, 1) 100%);
+    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255, 254, 52, 1) 100%);
     height: 28px;
-    border-bottom: 1px solid #a8c1f1;
+    border-bottom: 1px solid #fffe34;
     margin: -8px;
     
 }
@@ -61,7 +62,7 @@ html, body {
     width: 60px;
 }
 #bookmarks{
-    color: #a8c1f1;
+    color: #fffe34;
     text-shadow: 1px 1px 2px black;
     margin: 0px 0 0 0;
     
@@ -85,7 +86,7 @@ html, body {
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
   background-color: #000000;
-  border-bottom: 1px solid #a8c1f1;
+  border-bottom: 1px solid #fffe34;
   margin: 15px 0 0px 0;
   
 }
@@ -114,7 +115,7 @@ html, body {
 
 /* Change color of dropdown links on hover */
 .dropdown-content .alink:hover {
-    text-shadow: 0 0 2px #a8c1f1;
+    text-shadow: 0 0 2px #fffe34;
 }
 .dropdown-content .ulink:hover {
     text-shadow: 0 0 2px #444444;
@@ -128,12 +129,12 @@ html, body {
     text-shadow: 0 0 2px #000000;
 }
 .alink {
-    color: #a8c1f1;
+    color: #fffe34;
     text-shadow: 0 0 2px #000000;
 }
 .material-symbols-outlined {
     color: #000000;
-    background: #a8c1f1;
+    background: #fffe34;
     border-radius: 15px;
     display: inline-block;
 }
@@ -141,7 +142,7 @@ html, body {
 /* Terminal Shit begins here. */
 body .shell {
     width: 760px;
-    border: 2px solid #a8c1f1;
+    border: 2px solid #fffe34;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-top: 40px;
@@ -170,8 +171,8 @@ body .shell .terminal .cmd {
 
 .shell > .status-bar .title {
     cursor: move;
-    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(168, 193, 241, 1) 100%);
-    color: #a8c1f1;
+    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255, 254, 52, 1) 100%);
+    color: #fffe34;
     font-size: 24px;
     font-family: 'Iceberg', cursive;
     white-space: nowrap;
@@ -190,7 +191,7 @@ body .shell .terminal .cmd {
 @supports (--css: variables) {
     .shell.ubuntu .terminal {
         --background: #000000;
-        --color: #a8c1f1;
+        --color: #fffe34;
         --opacity: 0.7;
     }
 }
