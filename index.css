@@ -9,6 +9,7 @@ Make terminal greeting akin to unix
 Put in embed info for discord.
 Greyharrow old color used to be #a8c1f1
 Kamina old color: fffe34
+Kadman color: 8fd4f4
 */
 
 
@@ -40,7 +41,7 @@ html, body {
     display: flex;
     background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(143, 212, 244, 1) 100%);
     height: 28px;
-    border-bottom: 1px solid #8fd4f4;
+    border-bottom: 1px solid #FF6900;
     margin: -8px;
     
 }
@@ -63,7 +64,7 @@ html, body {
     width: 60px;
 }
 #bookmarks{
-    color: #8fd4f4;
+    color: #FF6900;
     text-shadow: 1px 1px 2px black;
     margin: 0px 0 0 0;
     
@@ -87,7 +88,7 @@ html, body {
 /* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
   background-color: #000000;
-  border-bottom: 1px solid #8fd4f4;
+  border-bottom: 1px solid #FF6900;
   margin: 15px 0 0px 0;
   
 }
@@ -116,7 +117,7 @@ html, body {
 
 /* Change color of dropdown links on hover */
 .dropdown-content .alink:hover {
-    text-shadow: 0 0 2px #8fd4f4;
+    text-shadow: 0 0 2px #FF6900;
 }
 .dropdown-content .ulink:hover {
     text-shadow: 0 0 2px #444444;
@@ -130,12 +131,12 @@ html, body {
     text-shadow: 0 0 2px #000000;
 }
 .alink {
-    color: #8fd4f4;
+    color: #FF6900;
     text-shadow: 0 0 2px #000000;
 }
 .material-symbols-outlined {
     color: #000000;
-    background: #8fd4f4;
+    background: #FF6900;
     border-radius: 15px;
     display: inline-block;
 }
@@ -143,7 +144,7 @@ html, body {
 /* Terminal Shit begins here. */
 body .shell {
     width: 760px;
-    border: 2px solid #8fd4f4;
+    border: 2px solid #FF6900;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-top: 40px;
@@ -173,7 +174,7 @@ body .shell .terminal .cmd {
 .shell > .status-bar .title {
     cursor: move;
     background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(143, 212, 244, 1) 100%);
-    color: #8fd4f4;
+    color: #FF6900;
     font-size: 24px;
     font-family: 'Iceberg', cursive;
     white-space: nowrap;
@@ -192,7 +193,7 @@ body .shell .terminal .cmd {
 @supports (--css: variables) {
     .shell.ubuntu .terminal {
         --background: #000000;
-        --color: #8fd4f4;
+        --color: #FF6900;
         --opacity: 0.7;
     }
 }
