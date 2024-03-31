@@ -39,7 +39,7 @@ html, body {
 }
 .navbar{
     display: flex;
-    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(143, 212, 244, 1) 100%);
+    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255, 105, 0, 1) 100%);
     height: 28px;
     border-bottom: 1px solid #FF6900;
     margin: -8px;
@@ -173,7 +173,7 @@ body .shell .terminal .cmd {
 
 .shell > .status-bar .title {
     cursor: move;
-    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(143, 212, 244, 1) 100%);
+    background-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(255, 105, 0, 1) 100%);
     color: #FF6900;
     font-size: 24px;
     font-family: 'Iceberg', cursive;
