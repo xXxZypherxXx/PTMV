@@ -155,6 +155,13 @@ function completion(string, callback) {
             return dir + '/';
         });
     }
+    function dirs(fcwd) {
+        return Object.keys(fcwd).filter(function(key) {
+            return is_dir(fcwd[key]);
+        }).map(function(dir) {
+            return dir + '/';
+        });
+    }
     if (cmd.name === 'ls') {
         callback([]);
     } else if (cmd.name === 'cd') {
