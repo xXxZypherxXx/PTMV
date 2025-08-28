@@ -47,7 +47,11 @@ var fs = {
         'GoldenRule.tab': GoldenRule.innerHTML,
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
                 "Volume1": Volume1.innerHTML,
-            
+        } ,
+        "PerfectDrawLeaksDoNotLook": {
+                "Test1": Monoceros.innerHTML,
+                "Test2": val3.innerHTML,
+                "Test3": val4.innerHTML,
         }
     }
 };
