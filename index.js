@@ -57,7 +57,7 @@ var fs = {
     }
 };
 var falsefs = {
-    'BigBootyJudy': {
+    'FOR-30DE': {
         'Journal02_17_1516u.txt': Journal1516u.innerHTML ,
         'FBIMemo.txt': FBINotice.innerHTML ,
         'InABottle.msg': InABottle.innerHTML ,
