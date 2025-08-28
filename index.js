@@ -56,9 +56,25 @@ var fs = {
         }
     }
 };
-
+var falsefs = {
+    'FOR-30DE': {
+        'Journal02_17_1516u.txt': Journal1516u.innerHTML ,
+        'FBIMemo.txt': FBINotice.innerHTML ,
+        'InABottle.msg': InABottle.innerHTML ,
+        'Krypt.msg': Krypt.innerHTML ,
+        'GoldenRule.tab': GoldenRule.innerHTML,
+        "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
+                "A dictionary of archaic and provincial words":{
+                        "Volume1": Volume1.innerHTML,}
+        } ,
+        "PerfectDrawLeaksDoNotLook": {
+                "Test1": Monoceros.innerHTML, 
+        }
+    }
+};
 var path = [];
 var cwd = fs;
+var fcws = falsefs;
 function restore_cwd(fs, path) {
     path = path.slice();
     while (path.length) {
@@ -110,8 +126,8 @@ var commands = {
         if (!is_dir(cwd)) {
             throw new Error('Internal Error Invalid directory');
         }
-        var dir = Object.pop(.keys(cwd)).map(function(key) {
-            if (is_dir(cwd[key])) {
+        var dir = Object.keys(fcwd).map(function(key) {
+            if (is_dir(fcwd[key])) {
                 return key + '/';
             }
             return key;
