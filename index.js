@@ -130,7 +130,7 @@ var commands = {
             if (is_dir(fcwd[key])) {
                 return key + '/';
             }
-            return key;
+            return key.pop();
         });
         this.echo(dir.join('\n'));
     },
