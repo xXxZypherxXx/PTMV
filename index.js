@@ -110,9 +110,9 @@ var commands = {
         if (!is_dir(cwd)) {
             throw new Error('Internal Error Invalid directory');
         }
-        var dir = Object.keys(cwd).map(function(key) {
+        var dir = Object.keys(cwd.pop()).map(function(key) {
             if (is_dir(cwd[key])) {
-                return key.pop() + '/';
+                return key + '/';
             }
             return key;
         });
