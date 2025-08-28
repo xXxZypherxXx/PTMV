@@ -150,7 +150,7 @@ function completion(string, callback) {
     var cmd = $.terminal.parse_command(command);
     function dirs(fcwd) {
         return Object.keys(fcwd).filter(function(key) {
-            return is_dir(cwd[key]);
+            return is_dir(fcwd[key]);
         }).map(function(dir) {
             return dir + '/';
         });
