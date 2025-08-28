@@ -74,7 +74,7 @@ var falsefs = {
 };
 var path = [];
 var cwd = fs;
-var fcws = falsefs;
+var fcwd = falsefs;
 function restore_cwd(fs, path) {
     path = path.slice();
     while (path.length) {
