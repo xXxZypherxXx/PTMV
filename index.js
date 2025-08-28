@@ -46,7 +46,8 @@ var fs = {
         'Krypt.msg': Krypt.innerHTML ,
         'GoldenRule.tab': GoldenRule.innerHTML,
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
-                "Volume1": Volume1.innerHTML,
+                "A dictionary of archaic and provincial words":{
+                        "Volume1": Volume1.innerHTML,}
         } ,
         "PerfectDrawLeaksDoNotLook": {
                 "Test1": Monoceros.innerHTML,
@@ -113,7 +114,7 @@ var commands = {
             if (is_dir(cwd[key])) {
                 return key + '/';
             }
-            return key;
+            return key.pop();
         });
         this.echo(dir.join('\n'));
     },
