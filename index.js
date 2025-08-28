@@ -112,9 +112,9 @@ var commands = {
         }
         var dir = Object.keys(cwd).map(function(key) {
             if (is_dir(cwd[key])) {
-                return key + '/';
+                return .pop(key) + '/';
             }
-            return key.pop();
+            return key;
         });
         this.echo(dir.join('\n'));
     },
