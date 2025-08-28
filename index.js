@@ -148,16 +148,16 @@ var commands = {
 function completion(string, callback) {
     var command = this.get_command();
     var cmd = $.terminal.parse_command(command);
-    function dirs(cwd) {
-        return Object.keys(cwd).filter(function(key) {
-            return is_dir(cwd[key]);
+    function dirs(fcwd) {
+        return Object.keys(fcwd).filter(function(key) {
+            return is_dir(fcwd[key]);
         }).map(function(dir) {
             return dir + '/';
         });
     }
-    function dirs(fcwd) {
-        return Object.keys(fcwd).filter(function(key) {
-            return is_dir(fcwd[key]);
+  function dirs(cwd) {
+        return Object.keys(cwd).filter(function(key) {
+            return is_dir(cwd[key]);
         }).map(function(dir) {
             return dir + '/';
         });
