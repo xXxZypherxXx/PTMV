@@ -46,8 +46,7 @@ var fs = {
         'Krypt.msg': Krypt.innerHTML ,
         'GoldenRule.tab': GoldenRule.innerHTML,
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
-                "A dictionary of archaic and provincial words":{
-                        "Volume1": Volume1.innerHTML,}
+                "Volume1": Volume1.innerHTML,
         } ,
         "PerfectDrawLeaksDoNotLook": {
                 "Test1": Monoceros.innerHTML,
@@ -56,6 +55,7 @@ var fs = {
         }
     }
 };
+
 var path = [];
 var cwd = fs;
 function restore_cwd(fs, path) {
@@ -131,7 +131,7 @@ var commands = {
 function completion(string, callback) {
     var command = this.get_command();
     var cmd = $.terminal.parse_command(command);
-  function dirs(cwd) {
+    function dirs(cwd) {
         return Object.keys(cwd).filter(function(key) {
             return is_dir(cwd[key]);
         }).map(function(dir) {
@@ -211,4 +211,3 @@ $('#type, #dark').on('change', function() {
         term.focus();
     }, 400);
 });
-
