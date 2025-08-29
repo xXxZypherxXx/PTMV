@@ -105,20 +105,18 @@ var commands = {
         }
         this.resume();
     },
-  //LS FUNCTION START
     ls: function() {
-        if (!is_dir(cwd)) { //Checks if cwd is a directory, and if not throws an error.
+        if (!is_dir(cwd)) {
             throw new Error('Internal Error Invalid directory');
         }
-        var dir = Object.keys(cwd).map(function(key+) { //Creates new variable 'dir', maps keys  to cwd, and passes them to the next function.
-            if (is_dir(cwd[key])) { //If cwd[key] is a directory, return it plus / to make it seem like a folder
+        var dir = Object.keys(cwd).map(function(key) {
+            if (is_dir(cwd[key])) {
                 return key + '/';
             }
-            return key; //return the rest of the keys without it. 
+            return key;
         });
-        this.echo(dir.join('\n')); //print previously returned 
+        this.echo(dir.join('\n'));
     },
-  //LS FUNCTION END
     open: function(file) {
         if (!is_file(cwd[file])) {
             this.error($.terminal.escape_brackets(file) + " does not exist!");
