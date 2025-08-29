@@ -40,19 +40,19 @@ var shell = $('.shell').resizable({
 // Fake in memory filesystem
 var fs = {
     'FOR-30DE': {
-        'Journal02_17_1516u.txt': Journal1516u.innerHTML {hidden:false}
-        'FBIMemo.txt': FBINotice.innerHTML , {hidden:false}
-        'InABottle.msg': InABottle.innerHTML , {hidden:false}
-        'Krypt.msg': Krypt.innerHTML , {hidden:false}
-        'GoldenRule.tab': GoldenRule.innerHTML, {hidden:false}
+        'Journal02_17_1516u.txt': Journal1516u.innerHTML {ishidden:false}
+        'FBIMemo.txt': FBINotice.innerHTML , {ishidden:false}
+        'InABottle.msg': InABottle.innerHTML , {ishidden:false}
+        'Krypt.msg': Krypt.innerHTML , {ishidden:false}
+        'GoldenRule.tab': GoldenRule.innerHTML, {ishidden:false}
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": { 
-                "Volume1": Volume1.innerHTML,
+                "Volume1": Volume1.innerHTML, {ishidden:false}
         } ,
         "PerfectDrawLeaksDoNotLook": {
-                "Test1": Monoceros.innerHTML,
-                "Test2": val3.innerHTML,
-                "Test3": val4.innerHTML, 
-        }
+                "Test1": Monoceros.innerHTML, {ishidden:false}
+                "Test2": val3.innerHTML, {ishidden:true}
+                "Test3": val4.innerHTML, {ishidden:true}
+        } 
     }
 };
 
