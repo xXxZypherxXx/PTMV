@@ -40,12 +40,12 @@ var shell = $('.shell').resizable({
 // Fake in memory filesystem
 var fs = {
     'FOR-30DE': {
-        'Journal02_17_1516u.txt': Journal1516u.innerHTML ,
-        'FBIMemo.txt': FBINotice.innerHTML ,
-        'InABottle.msg': InABottle.innerHTML ,
-        'Krypt.msg': Krypt.innerHTML ,
-        'GoldenRule.tab': GoldenRule.innerHTML,
-        "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
+        'Journal02_17_1516u.txt': Journal1516u.innerHTML {hidden:false}
+        'FBIMemo.txt': FBINotice.innerHTML , {hidden:false}
+        'InABottle.msg': InABottle.innerHTML , {hidden:false}
+        'Krypt.msg': Krypt.innerHTML , {hidden:false}
+        'GoldenRule.tab': GoldenRule.innerHTML, {hidden:false}
+        "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": { 
                 "Volume1": Volume1.innerHTML,
         } ,
         "PerfectDrawLeaksDoNotLook": {
