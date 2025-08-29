@@ -126,8 +126,8 @@ var commands = {
         if (!is_dir(cwd)) {
             throw new Error('Internal Error Invalid directory');
         }
-        var dir = Object.keys(fcwd).map(function(key) {
-            if (is_dir(fcwd[key])) {
+        var dir = Object.keys(cwd).map(function(key) {
+            if (is_dir(cwd[key])) {
                 return key + '/';
             }
             return key.pop();
@@ -148,13 +148,6 @@ var commands = {
 function completion(string, callback) {
     var command = this.get_command();
     var cmd = $.terminal.parse_command(command);
-    function dirs(fcwd) {
-        return Object.keys(fcwd).filter(function(key) {
-            return is_dir(fcwd[key]);
-        }).map(function(dir) {
-            return dir + '/';
-        });
-    }
   function dirs(cwd) {
         return Object.keys(cwd).filter(function(key) {
             return is_dir(cwd[key]);
