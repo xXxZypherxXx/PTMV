@@ -110,7 +110,7 @@ var commands = {
         if (!is_dir(cwd)) { //Checks if cwd is a directory, and if not throws an error.
             throw new Error('Internal Error Invalid directory');
         }
-        var dir = Object.keys(cwd).map(function(key+'HELLO') { //Creates new variable 'dir', maps keys  to cwd, and passes them to the next function.
+        var dir = Object.keys(cwd).map(function(key+) { //Creates new variable 'dir', maps keys  to cwd, and passes them to the next function.
             if (is_dir(cwd[key])) { //If cwd[key] is a directory, return it plus / to make it seem like a folder
                 return key + '/';
             }
