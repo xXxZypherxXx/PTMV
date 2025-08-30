@@ -47,22 +47,26 @@ let fs = {
         'Krypt.msg': Krypt.innerHTML,
         'GoldenRule.tab': GoldenRule.innerHTML,
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": { 
-                "Volume1": Volume1.innerHTML, 
+                "Dictionary_in_2_Volumes" : {
+                 "Page375.txt" : Volume1.innerHTML
+                } , 
         } ,
+         'Captains.log' : Captains.innerHTML,
+         'Navidson.rcd' : Navidson.innerHTML,
         'PerfectDrawLeaksDoNotLook': {
                 "HalcyonNews.txt": HalcyonNews.innerHTML, 
                 "IncidentStardustTranscript.txt": IST.innerHTML, 
                 "WHOAREYOU.error": red(WHOAREYOU.innerHTML), 
         } ,
         'Outerrim': {
-                "HalcyonNews.txt": HalcyonNews.innerHTML, 
-                "IncidentStardustTranscript.txt": IST.innerHTML, 
-                "WHOAREYOU.error": WHOAREYOU.innerHTML, 
+                //"HalcyonNews.txt": HalcyonNews.innerHTML, 
+                //"IncidentStardustTranscript.txt": IST.innerHTML, 
+                //"WHOAREYOU.error": WHOAREYOU.innerHTML, 
         } ,
          'Ecumenopolis': {
-                "HalcyonNews.txt": HalcyonNews.innerHTML, 
-                "IncidentStardustTranscript.txt": IST.innerHTML, 
-                "WHOAREYOU.error": WHOAREYOU.innerHTML, 
+                //"HalcyonNews.txt": HalcyonNews.innerHTML, 
+                //"IncidentStardustTranscript.txt": IST.innerHTML, 
+                //"WHOAREYOU.error": WHOAREYOU.innerHTML, 
         } 
     }
 };
@@ -129,7 +133,7 @@ var commands = {
                 return key + '/';
             }             
             return key;
-        }).splice(0,7);
+        }).splice(0,9);
         this.echo(dir.join('\n'));
     },
   //End of LS function
@@ -189,7 +193,7 @@ function completion(string, callback) {
 ////THIS ENDS CODERIP
 var term = $('.cmdcontent').terminal(commands, {
     animation,
-    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(RobinMech.innerHTML) + val5.innerHTML + "30DE terminal currently open. Please type help for a list of commands.",  
+    greetings: red("Error: Unable to access A.L.E.X.I.O.S.-Terminal, Horus node appears offline. Intercepting nearest rogue communications.") + val1.innerHTML + red("ERROR: Decryption Failure. Un［r|d］efined media codecs not found. Displaying as rawtext.") + blue(RobinMech.innerHTML) + val5.innerHTML + "Ȝ0DE terminal currently open. Please type help for a list of commands.",  
     prompt: prompt(),
     completion: completion,
     // detect iframe codepen preview
