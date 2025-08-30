@@ -52,7 +52,7 @@ let fs = {
         'PerfectDrawLeaksDoNotLook': {
                 "HalcyonNews.txt": HalcyonNews.innerHTML, 
                 "IncidentStardustTranscript.txt": IST.innerHTML, 
-                "WHOAREYOU.error": WHOAREYOU.innerHTML, 
+                "WHOAREYOU.error": red(WHOAREYOU.innerHTML), 
         } ,
         'Outerrim': {
                 "HalcyonNews.txt": HalcyonNews.innerHTML, 
@@ -129,7 +129,7 @@ var commands = {
                 return key + '/';
             }             
             return key;
-        }).splice(0,6);
+        }).splice(0,7);
         this.echo(dir.join('\n'));
     },
   //End of LS function
