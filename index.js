@@ -26,6 +26,7 @@ function blue(message) {
 }
 //Animation function?
 var animation;
+var ishidden;
 
 //Below this is edited terminal shit.
 var shell = $('.shell').resizable({
@@ -38,20 +39,30 @@ var shell = $('.shell').resizable({
     handle: '> .status-bar .title'
 });
 // Fake in memory filesystem
-var fs = {
+let fs = {
     'FOR-30DE': {
-        'Journal02_17_1516u.txt': Journal1516u.innerHTML, {ishidden:false}
-        'FBIMemo.txt': FBINotice.innerHTML,  {ishidden:false}
-        'InABottle.msg': InABottle.innerHTML,  {ishidden:false}
-        'Krypt.msg': Krypt.innerHTML,  {ishidden:false}
-        'GoldenRule.tab': GoldenRule.innerHTML, {ishidden:false}
+        'Journal02_17_1516u.txt': Journal1516u.innerHTML, 
+        'FBIMemo.txt': FBINotice.innerHTML,
+        'InABottle.msg': InABottle.innerHTML,
+        'Krypt.msg': Krypt.innerHTML,
+        'GoldenRule.tab': GoldenRule.innerHTML,
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": { 
-                "Volume1": Volume1.innerHTML, {ishidden:false} 
+                "Volume1": Volume1.innerHTML, 
         } ,
-        "PerfectDrawLeaksDoNotLook": {
-                "Test1": Monoceros.innerHTML, {ishidden:false}
-                "Test2": val3.innerHTML, {ishidden:true},
-                "Test3": val4.innerHTML, {ishidden:true}
+        'PerfectDrawLeaksDoNotLook': {
+                "HalcyonNews.txt": HalcyonNews.innerHTML, 
+                "IncidentStardustTranscript.txt": IST.innerHTML, 
+                "WHOAREYOU.error": WHOAREYOU.innerHTML, 
+        } ,
+        'Outerrim': {
+                "HalcyonNews.txt": HalcyonNews.innerHTML, 
+                "IncidentStardustTranscript.txt": IST.innerHTML, 
+                "WHOAREYOU.error": WHOAREYOU.innerHTML, 
+        } ,
+         'Ecumenopolis': {
+                "HalcyonNews.txt": HalcyonNews.innerHTML, 
+                "IncidentStardustTranscript.txt": IST.innerHTML, 
+                "WHOAREYOU.error": WHOAREYOU.innerHTML, 
         } 
     }
 };
@@ -79,6 +90,7 @@ function is_dir(obj) {
 function is_file(obj) {
     return typeof obj === 'string';
 }
+
 var commands = {
     cd: function(dir) {
         this.pause();
@@ -105,18 +117,22 @@ var commands = {
         }
         this.resume();
     },
+  //Start of LS function
     ls: function() {
         if (!is_dir(cwd)) {
             throw new Error('Internal Error Invalid directory');
         }
+        
         var dir = Object.keys(cwd).map(function(key) {
-            if (is_dir(cwd[key])) {
+        
+          if (is_dir(cwd[key])) {
                 return key + '/';
-            }
+            }             
             return key;
-        });
+        }).splice(0,6);
         this.echo(dir.join('\n'));
     },
+  //End of LS function
     open: function(file) {
         if (!is_file(cwd[file])) {
             this.error($.terminal.escape_brackets(file) + " does not exist!");
