@@ -144,12 +144,12 @@ html, body {
 
 /* Terminal Shit begins here. */
 body .shell {
-    width: 760px;
+    width: 60%;
     border: 2px solid #FFC933;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     margin-top: 40px;
-    margin-left: 1000px;
+    margin-left: 40%;
 
 
 
