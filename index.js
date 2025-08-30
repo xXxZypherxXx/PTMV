@@ -17,7 +17,7 @@ window.onclick = function(event) {
     }
   }
 };
-//A function for a terminal to display red text.
+//A function for a terminal to display red text. 
 function red(message) {
     return "[[gb;#FF0000;black]" + message + "]";
 }
