@@ -44,7 +44,7 @@ let fs = {
     'Ecumenopolis' : blue(Directory.innerHTML),
     'FOR-30DE': {
         'Outerrim' : blue(Directory.innerHTML),
-        '' : blue(Directory.innerHTML),
+        'Ecumenopolis' : blue(Directory.innerHTML),
         'Journal02_17_1516u.txt': Journal1516u.innerHTML, 
         'FBIMemo.txt': FBINotice.innerHTML,
         'InABottle.msg': InABottle.innerHTML,
