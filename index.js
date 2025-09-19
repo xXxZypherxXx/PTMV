@@ -40,34 +40,50 @@ var shell = $('.shell').resizable({
 });
 // Fake in memory filesystem
 let fs = {
+    '' : blue(Directory.innerHTML),
+    '' : blue(Directory.innerHTML),
     'FOR-30DE': {
+        '' : blue(Directory.innerHTML),
+        '' : blue(Directory.innerHTML),
         'Journal02_17_1516u.txt': Journal1516u.innerHTML, 
         'FBIMemo.txt': FBINotice.innerHTML,
         'InABottle.msg': InABottle.innerHTML,
         'Krypt.msg': Krypt.innerHTML,
         'GoldenRule.tab': GoldenRule.innerHTML,
-        "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": { 
+        "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
+                '' : blue(Directory.innerHTML),
+                '' : blue(Directory.innerHTML),
                 "Dictionary_in_2_Volumes" : {
-                 "Page375.txt" : Volume1.innerHTML
+                  '' : blue(Directory.innerHTML),
+                  '' : blue(Directory.innerHTML), 
+                  "Page375.txt" : Volume1.innerHTML
                 } , 
         } ,
          'Captains.log' : Captains.innerHTML,
          'Navidson.rcd' : Navidson.innerHTML,
-        'PerfectDrawLeaksDoNotLook': {
+         'PerfectDrawLeaksDoNotLook': {
+               'Outerrim': {
+                  '' : blue(Directory.innerHTML),
+                  '' : blue(Directory.innerHTML),
+                    'LetsTalk.txt' : Talk1.innerHTML,
+                //"HalcyonNews.txt": HalcyonNews.innerHTML, 
+                //"IncidentStardustTranscript.txt": IST.innerHTML, 
+                //"WHOAREYOU.error": WHOAREYOU.innerHTML, 
+        } ,
+               'Ecumenopolis': {
+                  '' : blue(Directory.innerHTML),
+                  '' : blue(Directory.innerHTML),
+                    'LetsTalk.txt' : Talk2.innerHTML,
+                //"HalcyonNews.txt": HalcyonNews.innerHTML, 
+                //"IncidentStardustTranscript.txt": IST.innerHTML, 
+                //"WHOAREYOU.error": WHOAREYOU.innerHTML, 
+        },
+
                 "HalcyonNews.txt": HalcyonNews.innerHTML, 
                 "IncidentStardustTranscript.txt": IST.innerHTML, 
                 "WHOAREYOU.error": red(WHOAREYOU.innerHTML), 
-        } ,
-        'Outerrim': {
-                //"HalcyonNews.txt": HalcyonNews.innerHTML, 
-                //"IncidentStardustTranscript.txt": IST.innerHTML, 
-                //"WHOAREYOU.error": WHOAREYOU.innerHTML, 
-        } ,
-         'Ecumenopolis': {
-                //"HalcyonNews.txt": HalcyonNews.innerHTML, 
-                //"IncidentStardustTranscript.txt": IST.innerHTML, 
-                //"WHOAREYOU.error": WHOAREYOU.innerHTML, 
         } 
+ 
     }
 };
 
@@ -133,7 +149,7 @@ var commands = {
                 return key + '/';
             }             
             return key;
-        }).splice(0,9);
+        }).splice(2,9);
         this.echo(dir.join('\n'));
     },
   //End of LS function
