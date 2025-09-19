@@ -40,10 +40,10 @@ var shell = $('.shell').resizable({
 });
 // Fake in memory filesystem
 let fs = {
-    '' : blue(Directory.innerHTML),
-    '' : blue(Directory.innerHTML),
+    'Outerrim' : blue(Directory.innerHTML),
+    'Ecumenopolis' : blue(Directory.innerHTML),
     'FOR-30DE': {
-        '' : blue(Directory.innerHTML),
+        'Outerrim' : blue(Directory.innerHTML),
         '' : blue(Directory.innerHTML),
         'Journal02_17_1516u.txt': Journal1516u.innerHTML, 
         'FBIMemo.txt': FBINotice.innerHTML,
@@ -51,11 +51,11 @@ let fs = {
         'Krypt.msg': Krypt.innerHTML,
         'GoldenRule.tab': GoldenRule.innerHTML,
         "JAMES_ORCHARD_HALLIWELL-PHILLIPPS": {
-                '' : blue(Directory.innerHTML),
-                '' : blue(Directory.innerHTML),
+                'Outerrim' : blue(Directory.innerHTML),
+                'Ecumenopolis' : blue(Directory.innerHTML),
                 "Dictionary_in_2_Volumes" : {
-                  '' : blue(Directory.innerHTML),
-                  '' : blue(Directory.innerHTML), 
+                  'Outerrim' : blue(Directory.innerHTML),
+                  'Ecumenopolis' : blue(Directory.innerHTML), 
                   "Page375.txt" : Volume1.innerHTML
                 } , 
         } ,
@@ -63,16 +63,16 @@ let fs = {
          'Navidson.rcd' : Navidson.innerHTML,
          'PerfectDrawLeaksDoNotLook': {
                'Outerrim': {
-                  '' : blue(Directory.innerHTML),
-                  '' : blue(Directory.innerHTML),
+                  'Outerrim' : blue(Directory.innerHTML),
+                  'Ecumenopolis' : blue(Directory.innerHTML),
                     'LetsTalk.txt' : Talk1.innerHTML,
                 //"HalcyonNews.txt": HalcyonNews.innerHTML, 
                 //"IncidentStardustTranscript.txt": IST.innerHTML, 
                 //"WHOAREYOU.error": WHOAREYOU.innerHTML, 
         } ,
                'Ecumenopolis': {
-                  '' : blue(Directory.innerHTML),
-                  '' : blue(Directory.innerHTML),
+                  'Outerrim' : blue(Directory.innerHTML),
+                  'Ecumenopolis' : blue(Directory.innerHTML),
                     'LetsTalk.txt' : Talk2.innerHTML,
                 //"HalcyonNews.txt": HalcyonNews.innerHTML, 
                 //"IncidentStardustTranscript.txt": IST.innerHTML, 
